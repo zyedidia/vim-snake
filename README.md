@@ -1,5 +1,9 @@
 #vim-snake
-This is a snake game written in pure vim
+This is a snake game written in pure vim as a plugin.
+
+Control the snake with the hjkl keys.
+
+![SnakeImage](./SnakeImage.png)
 
 ##Installation
 Install as you would a normal plugin
