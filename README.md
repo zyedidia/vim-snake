@@ -1,9 +1,9 @@
 # Vim Snake
-This is a snake game written in vimscript so that you can take a break
-while coding and play a relaxing game of snake.
+Play ascii snake without leaving Vim! This game is written in Vimscript and allows
+you to play snake from the comfort of your editor.
 
 Control the snake with the hjkl keys (so that you can hone your vim movement
-skills).
+skills). Eat the apples and don't run into the wall or yourself.
 
 ![SnakeImage](./VimSnake.png)
 
