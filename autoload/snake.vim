@@ -7,10 +7,12 @@ func! snake#StartSnake()
 
     syn match snake "\*"
     syn match food "o"
+    syn match score "Score:.*"
     syn match wall "[|-]"
     hi link snake Identifier
     hi link food Error
     hi link wall Comment
+    hi link score Constant
 
     " Turn off the cursorline
     setlocal nocursorline
@@ -89,11 +91,13 @@ func! Init()
 
     let l:i = 1
 
-    while l:i <= g:snake_rows
+    while l:i < g:snake_rows
         " Add rows
         call append(line('$'), s:spaces)
         let l:i = l:i + 1
     endwhile
+    " Add one more row for the score
+    call append(line('$'), "            ")
 
     call SpawnFood()
 endfunc
@@ -190,15 +194,15 @@ func! Update()
     call DrawSnake()
 
     " Display the score
-    echo 'Score: ' . s:score
+    call setline(line('$'), 'Score: ' . s:score)
 endfunc
 
 func! Repaint()
     " Loop through every row and draw either spaces or dashes on it
     let l:i = 0
-    while l:i <= line('$')
+    while l:i <= g:snake_rows
         call setline(l:i, s:spaces)
-        if l:i == line('$')
+        if l:i == g:snake_rows
             call setline(l:i, s:dashes)
         endif
         let l:i = l:i + 1

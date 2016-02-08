@@ -3,9 +3,9 @@ This is a snake game written in vimscript so that you can take a break
 while coding and play a relaxing game of snake.
 
 Control the snake with the hjkl keys (so that you can hone your vim movement
-skills). Your score will be displayed below the status line.
+skills).
 
-![SnakeImage](./SnakeImage.png)
+![SnakeImage](./VimSnake.png)
 
 ## Installation
 You can install this plugin with your favorite plugin manager.
